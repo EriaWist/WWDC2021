@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QUm-kh-qur">
+    <device id="mac" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page2 View Controller-->
+        <scene sceneID="QOm-xS-tJr">
+            <objects>
+                <viewController id="QUm-kh-qur" customClass="Page2ViewController" customModule="BookCore" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmP-EK-sJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FcP-Xh-Yp3">
+                                <rect key="frame" x="-2" y="0.0" width="804" height="601"/>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9DG-gr-rMQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9DG-gr-rMQ" firstAttribute="bottom" secondItem="FcP-Xh-Yp3" secondAttribute="bottom" id="3g1-IB-aX3"/>
+                            <constraint firstItem="9DG-gr-rMQ" firstAttribute="trailing" secondItem="FcP-Xh-Yp3" secondAttribute="trailing" id="PBW-Yl-GuA"/>
+                            <constraint firstItem="FcP-Xh-Yp3" firstAttribute="leading" secondItem="9DG-gr-rMQ" secondAttribute="leading" id="Urq-xT-kVc"/>
+                            <constraint firstItem="FcP-Xh-Yp3" firstAttribute="top" secondItem="9DG-gr-rMQ" secondAttribute="top" id="pgf-p3-oJq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dve-3R-yRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.5" y="46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
