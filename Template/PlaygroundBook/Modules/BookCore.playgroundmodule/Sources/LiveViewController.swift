@@ -16,19 +16,31 @@ import GameplayKit
 class LiveViewController: UIViewController {
     @IBOutlet var myView: SKView!
     var rpg:RPG_SKView?
+    
+    let npc = SKSpriteNode(imageNamed: "NPC-1")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         rpg=RPG_SKView(view: myView, protagonistName: "npc")
-        rpg?.setBackgroundImage(backgroundImageName: "Butcher-Banker")
-        rpg?.run()
+        rpg?.setBackgroundImage(backgroundImageName: "Butcher-Banker",wallY: 100)
+        npc.anchorPoint = CGPoint(x: 0.5, y: 0)
+        npc.position=CGPoint(x: 50, y: 50)
+        npc.size=CGSize(width: 100, height: 100)
         
+        rpg?.addNPC(npc: npc)
+        rpg?.run()
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for i in touches{
             let location = i.location(in: rpg!.skScene)
+            if npc.intersects(rpg!.protagonist) {//偵測兩物體是否碰撞
+            }
             rpg!.moveProtagonist(x: location.x, y: location.y)
+            
+            
+            
         }
     }
     
