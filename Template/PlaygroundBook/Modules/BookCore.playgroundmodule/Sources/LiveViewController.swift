@@ -24,24 +24,26 @@ class LiveViewController: UIViewController {
         rpg=RPG_SKView(view: myView, protagonistName: "npc")
         rpg?.setBackgroundImage(backgroundImageName: "Butcher-Banker",wallY: 100)
         npc.anchorPoint = CGPoint(x: 0.5, y: 0)
-        npc.position=CGPoint(x: 50, y: 50)
-        npc.size=CGSize(width: 100, height: 100)
-        
+        npc.position=CGPoint(x: 200, y: 100)
+        npc.size=CGSize(width: 100, height: 200)
         rpg?.addNPC(npc: npc)
         rpg?.run()
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for i in touches{
-            let location = i.location(in: rpg!.skScene)
-            if npc.intersects(rpg!.protagonist) {//偵測兩物體是否碰撞
+        if let touch = touches.first
+        {
+            let location = touch.location(in: rpg!.gameScene)
+            if let rpg = self.rpg {
+                rpg.moveProtagonist(x: location.x, y: location.y){
+                    if self.npc.intersects(rpg.protagonist)
+                    {
+                        let ss = SKLabelNode(text: "asdasaaaaaaaaaada")
+                        self.rpg?.addNPC(npc: ss)
+                    }
+                }
             }
-            rpg!.moveProtagonist(x: location.x, y: location.y)
-            
-            
-            
         }
     }
-    
 }
