@@ -6,12 +6,12 @@ Contains English localizations of values in Manifest.plist files in the playgrou
 */
 
 /* The localized name of the playground book. */
-"PlaygroundBookName" = "Playground Book";
+"PlaygroundBookName" = "SteamPunk";
 
 /* The localized name of the first chapter in the playground book. */
-"ChapterOneName" = "Chapter One";
+"ChapterOneName" = "B2";
 
 /* The localized name of the first page in the first chapter in the playground book. */
-"ChapterOnePageOneName" = "Playground Page";
+"ChapterOnePageOneName" = "The beginning of the story";
 
 "ChapterOnePageTowName" = "Test";

@@ -55,7 +55,7 @@ class RPG_SKView {
         gameScene.addChild(npc)//加上npc
     }
     
-    func run() {
+    func run() {//執行這個故事
         gameScene.addChild(protagonist)
         view.presentScene(gameScene)
     }
