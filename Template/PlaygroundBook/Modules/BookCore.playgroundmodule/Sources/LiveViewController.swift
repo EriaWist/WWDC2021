@@ -31,7 +31,7 @@ class LiveViewController: UIViewController {
     }
     
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//點擊螢幕
         if let touch = touches.first
         {
             let location = touch.location(in: rpg!.gameScene)

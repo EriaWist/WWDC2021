@@ -31,8 +31,8 @@ class RPG_SKView {
     func setBackgroundImage(backgroundImageName:String,wallY:CGFloat) {
         self.wallY=wallY
         let backgroundImage=SKSpriteNode(imageNamed: backgroundImageName) //背景圖
-        backgroundImage.blendMode = .replace
-        backgroundImage.zPosition = -1
+        backgroundImage.blendMode = .replace//.replace選項的意思是“只繪製它，忽略任何alpha值”
+        backgroundImage.zPosition = -1//zPosition為-1，這在我們的遊戲中意味著“將其拖到其他所有東西後面”。
 //        let size = gameScene.size
 //        let leftWall = SKSpriteNode(color: UIColor.brown, size: CGSize(width: 1, height: size.height))
 //        leftWall.position = CGPoint(x:size.height/2, y: size.width)
