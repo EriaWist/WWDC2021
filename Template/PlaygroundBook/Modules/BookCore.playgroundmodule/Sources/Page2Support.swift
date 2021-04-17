@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import PlaygroundSupport
+import SpriteKit
 public func instantiatePage2View() -> PlaygroundLiveViewable {
     let storyboard = UIStoryboard(name: "Page2", bundle: nil)
 
@@ -19,5 +20,11 @@ public func instantiatePage2View() -> PlaygroundLiveViewable {
         fatalError("LiveView.storyboard's initial scene is not a LiveViewController; please either update the storyboard or this function")
     }
 
+    
     return liveViewController
+}
+public func check(node:SKNode) {//寫在這讓main可以使用
+    let page = PlaygroundPage.current
+    let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
+    proxy.send(.data(node as! Data))//enum可以取值
 }

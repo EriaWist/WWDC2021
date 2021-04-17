@@ -7,6 +7,7 @@
 
 import UIKit
 import SpriteKit
+import PlaygroundSupport
 class Page2ViewController: UIViewController {
     @IBOutlet var page2SKView: SKView!
     var gameScene:SKScene?=nil
@@ -21,10 +22,7 @@ class Page2ViewController: UIViewController {
             gameScene.addChild(vendingMachine)
             page2SKView.presentScene(gameScene)
             // Do any additional setup after loading the view.
-            Observer.addUpdataFunc(id: "P2"){
-                let tall = SKSpriteNode(color: .white, size: CGSize(width: 1000, height: 100))
-                gameScene.addChild(tall)
-            }
+
         }
     }
     func check(node:SKNode) {
@@ -50,6 +48,7 @@ class Page2ViewController: UIViewController {
         
     }
     
+    
     /*
      // MARK: - Navigation
      
@@ -61,3 +60,16 @@ class Page2ViewController: UIViewController {
      */
     
 }
+//https://developer.apple.com/documentation/playgroundsupport/messaging_between_a_playground_page_and_the_always-on_live_view
+extension Page2ViewController:PlaygroundLiveViewMessageHandler{
+    func receive(_ message: PlaygroundValue) {
+        switch message {
+        case .data(let nod)://取enum值
+            gameScene?.addChild(nod as! SKNode)
+        default: break
+
+        }
+
+    }
+}
+

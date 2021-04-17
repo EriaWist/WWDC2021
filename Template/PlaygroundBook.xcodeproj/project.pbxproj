@@ -27,7 +27,6 @@
 		769F60C92627580E00BFE103 /* RPG_SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60C82627580E00BFE103 /* RPG_SKView.swift */; };
 		769F60CF26286E7D00BFE103 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60CE26286E7D00BFE103 /* GameScene.swift */; };
 		769F60DB262A1C5E00BFE103 /* DialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60DA262A1C5E00BFE103 /* DialogBox.swift */; };
-		769F60E5262AE9A000BFE103 /* observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60E4262AE9A000BFE103 /* observer.swift */; };
 		76C4A872261AD39700B03248 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A871261AD39600B03248 /* Page2.storyboard */; };
 		76C4A878261AD3F300B03248 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A877261AD3F300B03248 /* Page2ViewController.swift */; };
 		76C4A87E261AD41B00B03248 /* Page2Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A87D261AD41B00B03248 /* Page2Support.swift */; };
@@ -171,7 +170,6 @@
 		769F60C82627580E00BFE103 /* RPG_SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPG_SKView.swift; sourceTree = "<group>"; };
 		769F60CE26286E7D00BFE103 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		769F60DA262A1C5E00BFE103 /* DialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBox.swift; sourceTree = "<group>"; };
-		769F60E4262AE9A000BFE103 /* observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = observer.swift; sourceTree = "<group>"; };
 		76C4A871261AD39600B03248 /* Page2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
 		76C4A877261AD3F300B03248 /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		76C4A87D261AD41B00B03248 /* Page2Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2Support.swift; sourceTree = "<group>"; };
@@ -416,7 +414,6 @@
 				769F60C82627580E00BFE103 /* RPG_SKView.swift */,
 				769F60CE26286E7D00BFE103 /* GameScene.swift */,
 				769F60DA262A1C5E00BFE103 /* DialogBox.swift */,
-				769F60E4262AE9A000BFE103 /* observer.swift */,
 			);
 			path = RPG_2D;
 			sourceTree = "<group>";
@@ -637,7 +634,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				769F60CF26286E7D00BFE103 /* GameScene.swift in Sources */,
-				769F60E5262AE9A000BFE103 /* observer.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				769F60DB262A1C5E00BFE103 /* DialogBox.swift in Sources */,
 				76C4A87E261AD41B00B03248 /* Page2Support.swift in Sources */,
