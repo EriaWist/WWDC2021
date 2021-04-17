@@ -11,6 +11,7 @@ import PlaygroundSupport
 class Page2ViewController: UIViewController {
     @IBOutlet var page2SKView: SKView!
     var gameScene:SKScene?=nil
+    var tick:[SKNode]=[]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,13 +23,23 @@ class Page2ViewController: UIViewController {
             gameScene.addChild(vendingMachine)
             page2SKView.presentScene(gameScene)
             // Do any additional setup after loading the view.
-
+            let product = [[CGPoint(x: -82,y: 185),CGPoint(x: -10,y: 185),CGPoint(x: 62,y: 185)],
+                        [CGPoint(x: -82,y: 110),CGPoint(x: -10,y: 110),CGPoint(x: 62,y: 110)],
+                        [CGPoint(x: -82,y: 35),CGPoint(x: -10,y: 35),CGPoint(x: 62,y: 35)]]
+            for i in product{
+                for j in i {
+                    let tick = SKSpriteNode(imageNamed: "Tick")
+                    tick.anchorPoint=CGPoint(x: 0.5, y: 0.5)
+                    tick.size = CGSize(width: 50, height: 50)
+                    tick.position = j
+                    tick.isHidden=true
+                    self.tick.append(tick)
+                    gameScene.addChild(tick)
+                }
+            }
+            
         }
     }
-    func check(node:SKNode) {
-        gameScene!.addChild(node)
-    }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
@@ -64,8 +75,14 @@ class Page2ViewController: UIViewController {
 extension Page2ViewController:PlaygroundLiveViewMessageHandler{
     func receive(_ message: PlaygroundValue) {
         switch message {
-        case .data(let nod)://取enum值
-            gameScene?.addChild(nod as! SKNode)
+        case .integer(let num):
+            tick[num].isHidden=false
+        case .string(let str):
+            if str=="all" {
+                for i in tick {
+                    i.isHidden=true
+                }
+            }
         default: break
 
         }

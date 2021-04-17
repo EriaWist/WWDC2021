@@ -10,6 +10,7 @@ import SpriteKit
 class DialogBox{
     let view:SKScene
     let text:[String]
+    
     var sw:Bool = false//是否對話過
     init(view:SKScene,text:[String]) {
         self.view=view
@@ -20,6 +21,7 @@ class DialogBox{
             sw=true //告知已經點擊過
             printLine(textData: text, i: 0)
         }
+        
         return true
     }
     private func printLine(textData:[String],i:Int)

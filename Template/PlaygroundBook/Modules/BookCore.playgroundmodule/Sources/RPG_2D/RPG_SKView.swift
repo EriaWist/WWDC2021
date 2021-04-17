@@ -13,24 +13,26 @@ class RPG_SKView {
     let view:SKView //裝載SKView 在StoryBoard拉到ViewController然後傳入
     var wallY:CGFloat?=nil
     
-    init(view:SKView,protagonistName:String) {
+    init(view:SKView,protagonistName:String,x:CGFloat,y:CGFloat) {
         self.view = view
         gameScene=GameScene(size: view.bounds.size)
-        gameScene.scaleMode = .aspectFill
+        gameScene.scaleMode = .aspectFit
         gameScene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         protagonist = SKSpriteNode(imageNamed: protagonistName)
         protagonist.anchorPoint=CGPoint(x: 0.5,y: 0)
+        protagonist.size=CGSize(width: 130, height: 200)
+        protagonist.position=CGPoint(x: x, y: y)
         protagonist.physicsBody = SKPhysicsBody(rectangleOf: protagonist.size)//創建物理引擎
         protagonist.physicsBody?.affectedByGravity=false//使物體不再掉落
         protagonist.physicsBody?.allowsRotation=false //物體不會選轉
 //        protagonist.physicsBody?.isDynamic = false //靜態不被撞動 靜態 為了被牆擋住不設定
        
-        
     }
     
     func setBackgroundImage(backgroundImageName:String,wallY:CGFloat) {
         self.wallY=wallY
         let backgroundImage=SKSpriteNode(imageNamed: backgroundImageName) //背景圖
+        backgroundImage.size=view.bounds.size
         backgroundImage.blendMode = .replace//.replace選項的意思是“只繪製它，忽略任何alpha值”
         backgroundImage.zPosition = -1//zPosition為-1，這在我們的遊戲中意味著“將其拖到其他所有東西後面”。
 //        let size = gameScene.size

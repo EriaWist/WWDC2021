@@ -1,19 +1,21 @@
 //#-hidden-code
 //
 import SpriteKit
-
-let product = [[CGPoint(x: -82,y: 185),CGPoint(x: -10,y: 185),CGPoint(x: 62,y: 185)],
-            [CGPoint(x: -82,y: 110),CGPoint(x: -10,y: 110),CGPoint(x: 62,y: 110)],
-            [CGPoint(x: -82,y: 35),CGPoint(x: -10,y: 35),CGPoint(x: 62,y: 35)]]
-
+import BookCore //這裡記得要import
+reset()
 //#-end-hidden-code
-let str = "Hello, playground"
-for i in product{
-    for j in i {
-        let tick = SKSpriteNode(imageNamed: "Tick")
-        tick.anchorPoint=CGPoint(x: 0.5, y: 0.5)
-        tick.size = CGSize(width: 50, height: 50)
-        tick.position = j
-        check(tick)
+let productList = [1]
+let NeedToBringList = [1]
+
+for i in NeedToBringList.indices{ //i我們代表看到物品在清單上是第幾個
+    for j in productList.indices { //代表
+        if NeedToBringList[i] == productList[j] {
+            checkBuy(productNumber: j)
+        }
     }
 }
+//就像我們想要買漢堡 我們會在想者漢堡 (就像NeedToBringList[i]) 再販賣機(productList[j])尋找 漢堡 當發現清單上的漢堡跟商品一樣 我們會購買那項商品checkBuy
+//#-hidden-code
+//
+
+//#-end-hidden-code
