@@ -49,5 +49,5 @@ public func getTrueData()->Int{
 }
 public func goToNextPage()
 {
-    PlaygroundPage.current.assessmentStatus = .pass(message: "Great! You just five five with it!\n [Next Page](@next)")
+    PlaygroundPage.current.assessmentStatus = .pass(message: "Great! You buy the tou need!\n [Exit vendingMachine](@next)")
 }
