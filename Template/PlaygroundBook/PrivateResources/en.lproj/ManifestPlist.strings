@@ -15,3 +15,5 @@ Contains English localizations of values in Manifest.plist files in the playgrou
 "ChapterOnePageOneName" = "The beginning of the story";
 
 "ChapterOnePageTowName" = "VendingMachine";
+
+"ChapterOnePageThreName" = "Elevator";

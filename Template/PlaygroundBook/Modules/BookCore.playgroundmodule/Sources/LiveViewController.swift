@@ -45,6 +45,7 @@ class LiveViewController: UIViewController {
                         self.isTall=((self.dialog?.run()) != nil)
                     }else if(self.vendingMachine.intersects(rpg.protagonist) && self.isTall)
                     {
+                        PlaygroundPage.current.assessmentStatus = .pass(message: "")
                         PlaygroundPage.current.navigateTo(page: .next)
                     }
                 }

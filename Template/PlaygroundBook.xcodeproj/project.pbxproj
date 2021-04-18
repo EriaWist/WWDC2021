@@ -27,6 +27,9 @@
 		769F60C92627580E00BFE103 /* RPG_SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60C82627580E00BFE103 /* RPG_SKView.swift */; };
 		769F60CF26286E7D00BFE103 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60CE26286E7D00BFE103 /* GameScene.swift */; };
 		769F60DB262A1C5E00BFE103 /* DialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F60DA262A1C5E00BFE103 /* DialogBox.swift */; };
+		769FC948262C21F800E17C29 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769FC947262C21F800E17C29 /* Page3ViewController.swift */; };
+		769FC94E262C227700E17C29 /* Page3ViewSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769FC94D262C227700E17C29 /* Page3ViewSupport.swift */; };
+		769FC954262C235B00E17C29 /* Page3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769FC953262C235B00E17C29 /* Page3.storyboard */; };
 		76C4A872261AD39700B03248 /* Page2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C4A871261AD39600B03248 /* Page2.storyboard */; };
 		76C4A878261AD3F300B03248 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A877261AD3F300B03248 /* Page2ViewController.swift */; };
 		76C4A87E261AD41B00B03248 /* Page2Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4A87D261AD41B00B03248 /* Page2Support.swift */; };
@@ -170,6 +173,9 @@
 		769F60C82627580E00BFE103 /* RPG_SKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPG_SKView.swift; sourceTree = "<group>"; };
 		769F60CE26286E7D00BFE103 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		769F60DA262A1C5E00BFE103 /* DialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBox.swift; sourceTree = "<group>"; };
+		769FC947262C21F800E17C29 /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
+		769FC94D262C227700E17C29 /* Page3ViewSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewSupport.swift; sourceTree = "<group>"; };
+		769FC953262C235B00E17C29 /* Page3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page3.storyboard; sourceTree = "<group>"; };
 		76C4A871261AD39600B03248 /* Page2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Page2.storyboard; sourceTree = "<group>"; };
 		76C4A877261AD3F300B03248 /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		76C4A87D261AD41B00B03248 /* Page2Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2Support.swift; sourceTree = "<group>"; };
@@ -323,6 +329,8 @@
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
 				76C4A877261AD3F300B03248 /* Page2ViewController.swift */,
 				76C4A87D261AD41B00B03248 /* Page2Support.swift */,
+				769FC947262C21F800E17C29 /* Page3ViewController.swift */,
+				769FC94D262C227700E17C29 /* Page3ViewSupport.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
 				5E551EC42371FC3F00784365 /* Assets.xcassets */,
 				76C4A871261AD39600B03248 /* Page2.storyboard */,
+				769FC953262C235B00E17C29 /* Page3.storyboard */,
 			);
 			path = PrivateResources;
 			sourceTree = "<group>";
@@ -571,6 +580,7 @@
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				76C4A872261AD39700B03248 /* Page2.storyboard in Resources */,
+				769FC954262C235B00E17C29 /* Page3.storyboard in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +646,8 @@
 				769F60CF26286E7D00BFE103 /* GameScene.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				769F60DB262A1C5E00BFE103 /* DialogBox.swift in Sources */,
+				769FC948262C21F800E17C29 /* Page3ViewController.swift in Sources */,
+				769FC94E262C227700E17C29 /* Page3ViewSupport.swift in Sources */,
 				76C4A87E261AD41B00B03248 /* Page2Support.swift in Sources */,
 				76C4A878261AD3F300B03248 /* Page2ViewController.swift in Sources */,
 				769F60C92627580E00BFE103 /* RPG_SKView.swift in Sources */,

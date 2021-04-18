@@ -19,5 +19,7 @@ for i in NeedToBringList.indices{ //i我們代表看到物品在清單上是第�
 //#-hidden-code
 //
 if (getTrueData() >= NeedToBringList.count)
-{}
+{
+    goToNextPage()
+}
 //#-end-hidden-code

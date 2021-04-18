@@ -47,3 +47,7 @@ var trueData = 0
 public func getTrueData()->Int{
     return trueData
 }
+public func goToNextPage()
+{
+    PlaygroundPage.current.assessmentStatus = .pass(message: "Great! You just five five with it!\n [Next Page](@next)")
+}
