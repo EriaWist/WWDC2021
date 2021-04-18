@@ -4,18 +4,20 @@ import SpriteKit
 import BookCore //這裡記得要import
 reset()
 //#-end-hidden-code
-let productList = [1]
-let NeedToBringList = [1]
+let productList = [1,2,3,4,5,6,7,8,9]
+let NeedToBringList = [1,3,7,5,9,2]
 
 for i in NeedToBringList.indices{ //i我們代表看到物品在清單上是第幾個
     for j in productList.indices { //代表
         if NeedToBringList[i] == productList[j] {
             checkBuy(productNumber: j)
         }
+        lookNext()
     }
 }
 //就像我們想要買漢堡 我們會在想者漢堡 (就像NeedToBringList[i]) 再販賣機(productList[j])尋找 漢堡 當發現清單上的漢堡跟商品一樣 我們會購買那項商品checkBuy
 //#-hidden-code
 //
-
+if (getTrueData() >= NeedToBringList.count)
+{}
 //#-end-hidden-code

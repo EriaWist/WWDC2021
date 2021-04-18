@@ -11,15 +11,15 @@ import PlaygroundSupport
 import SpriteKit
 public func instantiatePage2View() -> PlaygroundLiveViewable {
     let storyboard = UIStoryboard(name: "Page2", bundle: nil)
-
+    
     guard let viewController = storyboard.instantiateInitialViewController() else {
         fatalError("LiveView.storyboard does not have an initial scene; please set one or update this function")
     }
-
+    
     guard let liveViewController = viewController as? Page2ViewController else {
         fatalError("LiveView.storyboard's initial scene is not a LiveViewController; please either update the storyboard or this function")
     }
-
+    
     
     return liveViewController
 }
@@ -33,4 +33,17 @@ public func reset()
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
     proxy.send(.string("all"))//enum可以取值
+    trueData=0
+}
+public func lookNext()
+{
+    let page = PlaygroundPage.current
+    let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
+        proxy.send(.string("next"))//enum可以取值
+    trueData+=1
+    sleep(1)
+}
+var trueData = 0
+public func getTrueData()->Int{
+    return trueData
 }
