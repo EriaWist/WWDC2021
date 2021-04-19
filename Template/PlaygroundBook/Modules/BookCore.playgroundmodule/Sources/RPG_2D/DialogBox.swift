@@ -27,13 +27,13 @@ class DialogBox{
     private func printLine(textData:[String],i:Int)
     {
         let text = SKLabelNode(text:textData[i])
-        let tall = SKSpriteNode(color: .white, size: CGSize(width: view.size.width-400, height: 100))
+        let tall = SKSpriteNode(color: .white, size: CGSize(width: view.size.width-200, height: 100))
         text.fontColor = .black
         tall.position = CGPoint(x: 0, y: -view.size.height/2+100)
         text.position = CGPoint(x: 0, y: -view.size.height/2+100)
         self.view.addChild(tall)
         self.view.addChild(text)
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) {//倒數一秒下一步
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) {//倒數一秒下一步
             timer in
             tall.removeFromParent()
             text.removeFromParent()

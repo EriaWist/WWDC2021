@@ -13,7 +13,7 @@ class Page3ViewController: UIViewController {
     @IBOutlet var myView: SKView!
     var rpg:RPG_SKView?
     var runingsw = true
-    let wall = SKSpriteNode(color: UIColor.brown, size: CGSize(width: 200, height: 100))
+    let wall = SKSpriteNode(color: UIColor.brown, size: CGSize(width: 150, height: 50))
     let vendingMachine = SKSpriteNode(imageNamed: "vendingMachine")
     var isTall = false
     var dialog:DialogBox?=nil

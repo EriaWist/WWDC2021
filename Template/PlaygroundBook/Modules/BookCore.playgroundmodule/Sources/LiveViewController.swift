@@ -29,7 +29,7 @@ class LiveViewController: UIViewController {
         npc.size=CGSize(width: 200, height: 200)
         vendingMachine.size = CGSize(width: 150, height: 200)
         vendingMachine.position = CGPoint(x: 250, y: -50)
-        dialog=DialogBox(view: rpg!.gameScene, text: ["哈哈","Hi"])
+        dialog=DialogBox(view: rpg!.gameScene, text: ["Hi Eria","Are you going to that special event today?","This list is for you to go and buy the things on it","Task Tips : Past Vending Machines"])
         rpg?.addNPC(npc: npc)
         rpg?.addNPC(npc: vendingMachine)
         rpg?.run()
