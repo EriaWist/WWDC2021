@@ -34,21 +34,66 @@ class Page3ViewController: UIViewController {
         rpg?.addNPC(npc: vendingMachine)
         rpg?.run()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {//點擊螢幕
-        if let touch = touches.first
-        {
-            let location = touch.location(in: rpg!.gameScene)
-            if let rpg = self.rpg  {
-                if runingsw{
-                    rpg.moveProtagonist(x: location.x, y: location.y){
-                        if self.wall.intersects(rpg.protagonist)
-                        {
-                            PlaygroundPage.current.assessmentStatus = .pass(message: "Go to the next level\n [Next Page](@next)")
-                            self.runingsw = false
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { //點擊螢幕
+        if let touch = touches.first {
+            let datax = touch.location(in: rpg!.gameScene).x
+            let datay = touch.location(in: rpg!.gameScene).y
+            let text = SKLabelNode(text:"x is \(Int(datax))   y is \(Int(datay))")
+            let tall = SKSpriteNode(color: .white, size: CGSize(width: 1000, height: 100))
+            text.fontColor = .black
+            tall.position = CGPoint(x: 0, y: -(rpg?.gameScene.size.height)!/2+100)
+            text.position = CGPoint(x: 0, y: -(rpg?.gameScene.size.height)!/2+100)
+            rpg?.gameScene.addChild(tall)
+            rpg?.gameScene.addChild(text)
+        }
+        
+        //                if let touch = touches.first
+        //                {
+        //                    let location = touch.location(in: rpg!.gameScene)
+        //                    if let rpg = self.rpg  {
+        //                        if runingsw{
+        //                            rpg.moveProtagonist(x: location.x, y: location.y){
+        //                                if self.wall.intersects(rpg.protagonist)
+        //                                {
+        //                                    PlaygroundPage.current.assessmentStatus = .pass(message: "Go to the next level\n [Next Page](@next)")
+        //                                    self.runingsw = false
+        //                                }
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        
+        
+    }
+}
+extension Page3ViewController:PlaygroundLiveViewMessageHandler{
+    func receive(_ message: PlaygroundValue) {
+        switch message {
+        case .array(let arr):
+            switch arr[0] {
+            case .integer(let x):
+                switch arr[1] {
+                case .integer(let y):
+                    if let rpg = self.rpg  {
+                        if runingsw{
+                            rpg.moveProtagonist(x: CGFloat(x), y: CGFloat(y)){
+                                if self.wall.intersects(rpg.protagonist)
+                                {
+                                    PlaygroundPage.current.assessmentStatus = .pass(message: "Go to the next level\n [Next Page](@next)")
+                                    self.runingsw = false
+                                }
+                            }
                         }
                     }
+                default:
+                    break
                 }
+            default:
+                break
             }
+        default:
+            break
         }
     }
 }

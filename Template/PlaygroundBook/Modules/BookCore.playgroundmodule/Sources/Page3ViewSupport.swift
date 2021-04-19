@@ -23,3 +23,8 @@ public func instantiatePage3View() -> PlaygroundLiveViewable {
     
     return liveViewController
 }
+public func moveTo(x:Int,y:Int){
+    let page = PlaygroundPage.current
+    let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
+    proxy.send(.array([.integer(x),.integer(y)]))//enum可以取值
+}
