@@ -40,8 +40,8 @@ let outData = """
 public func playMu(){
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
-    proxy.send(.string("play"))//enum可以取值
-    if dataAns[0]=="W" && dataAns[1]=="W" && dataAns[2]=="D" && dataAns[3]=="C" {
+    proxy.send(.string("play"))//enum可以取
+    if (dataAns[0]=="W" || dataAns[0]=="w") && (dataAns[1]=="W" || dataAns[1]=="w") && (dataAns[2]=="D" || dataAns[2]=="d") && (dataAns[3]=="C"||dataAns[3]=="c") {
         PlaygroundPage.current.assessmentStatus = .pass(message: "Great! You have successfully entered the Token to WWDC!\nCongratulations on completing all the content And You can try to listen to other morse code")
     }else{
         PlaygroundPage.current.assessmentStatus = .fail(hints: ["Please play WWDC"], solution: outData)
