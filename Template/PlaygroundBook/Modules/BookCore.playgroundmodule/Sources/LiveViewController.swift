@@ -24,7 +24,7 @@ class LiveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rpg=RPG_SKView(view: myView, protagonistName: "npc",x: -270,y: -200)
-        rpg?.setBackgroundImage(backgroundImageName: "Butcher-Banker",wallY: 100)
+        rpg?.setBackgroundImage(backgroundImageName: "Butcher-Banker",wallY: 300)
         npc.anchorPoint = CGPoint(x: 0.5, y: 0)
         npc.position=CGPoint(x: 0, y: 100)
         npc.size=CGSize(width: 200, height: 200)
@@ -33,7 +33,7 @@ class LiveViewController: UIViewController {
         arrowR.size=CGSize(width: 100, height: 50)
         vendingMachine.size = CGSize(width: 150, height: 200)
         vendingMachine.position = CGPoint(x: 250, y: -50)
-        dialog=DialogBox(view: rpg!.gameScene, text: ["Hi Eria","Are you going to that special event today?","This list is for you to go and buy the things on it","Task Tips : Past Vending Machines"])
+        dialog=DialogBox(view: rpg!.gameScene, text: ["Hi Eria","Are you going to that special event today?","This list is for you to go"," and buy the things on it","Task Tips : Past Vending Machines"])
         rpg?.addNPC(npc: arrowR)
         rpg?.addNPC(npc: npc)
         rpg?.addNPC(npc: vendingMachine)
