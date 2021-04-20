@@ -23,10 +23,10 @@ public func instantiatePage2View() -> PlaygroundLiveViewable {
     
     return liveViewController
 }
-public func checkBuy(productNumber:Int) {//寫在這讓main可以使用
+public func checkBuy(productId:Int) {//寫在這讓main可以使用
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
-    proxy.send(.integer(productNumber))//enum可以取值
+    proxy.send(.integer(productId))//enum可以取值
 }
 public func reset()
 {

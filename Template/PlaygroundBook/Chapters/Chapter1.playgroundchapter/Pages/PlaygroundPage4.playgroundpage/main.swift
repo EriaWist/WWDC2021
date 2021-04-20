@@ -4,26 +4,115 @@ import SpriteKit
 import BookCore //這裡記得要import
 restar()
 //#-end-hidden-code
-//摩斯密碼是一種時通時斷的訊號代碼，通過不同的排列順序來表達不同的英文字母
-//用點跟線組成
-//A     ‧─
-//B     ─‧‧‧
-//C     ─‧─‧
-//D     ─‧‧
-//E     ‧
-//F     ‧‧─‧
-//G     ─ ─‧
-//H       ‧‧‧‧
-//I     ‧‧
-//J     ‧─ ─ ─
-//K     ─‧─
-//L    ‧─‧‧
+/*:
+ # Morse code
+ \
+ **Story：**
+ \
+ Eria entered the elevator and found a machine.
+ \
+ After a closer look, he felt familiar and suddenly realized that it was a telegram.
+ \
+ It could be operated by morse code, and he had just bought a Morse Code List from the vending machine.
+ \
+ So Eria used morse code to enter the name of the event... .WWDC
+ 
+ * Callout(說明):
+ \
+ Morse code is an intermittent signal code, which expresses different letters of the alphabet by arranging them in different order.
+ \
+ Dots and lines are used to form dots for short tones and lines for long tones.
+ \
+ Enter the letters and press play to play the morse code sound
+
+ 
+ 
+ **Target：**
+ \
+ 1  use addWord() to add WWDC
+ \
+ 2 Turn on the sound
+ \
+ 3 Press to Run
+ - Example:
+ \
+ addWord(Char: "H")
+ \
+ addWord(Char: "e")
+ \
+ addWord(Char: "l")
+ \
+ addWord(Char: "l")
+ \
+ addWord(Char: "o")
+ 
+ 
+ * Callout(Morse Code List):
+ A     ‧─
+ \
+ B     ─‧‧‧
+ \
+ C     ─‧─‧
+ \
+ D     ─‧‧
+ \
+ E     ‧
+ \
+ F     ‧‧─‧
+ \
+ G     ─ ─‧
+ \
+ H       ‧‧‧‧
+ \
+ I     ‧‧
+ \
+ J     ‧─ ─ ─
+ \
+ K     ─‧─
+ \
+ L    ‧─‧‧
+ \
+ M     ─ ─
+ \
+ N     ─‧
+ \
+ O     ─ ─ ─
+ \
+ P     ‧─ ─‧
+ \
+ Q     ─ ─‧─
+ \
+ R     ‧─‧
+ \
+ S     ‧‧‧
+ \
+ T     ─
+ \
+ U     ‧‧─
+ \
+ V     ‧‧‧─
+ \
+ W     ‧─ ─
+ \
+ X     ─‧‧─
+ \
+ Y     ─‧─ ─
+ \
+ Z     ─ ─‧‧
+*/
+ 
+addWord(Char: "H")
+addWord(Char: "e")
+addWord(Char: "l")
+addWord(Char: "l")
+addWord(Char: "o")
 
 addWord(Char: "W")
-addWord(Char: "W")
-addWord(Char: "D")
-addWord(Char: "C")
-//可以點下螢幕從新播放
+addWord(Char: "o")
+addWord(Char: "r")
+addWord(Char: "l")
+addWord(Char: "d")
+
 //#-hidden-code
 //
 playMu()

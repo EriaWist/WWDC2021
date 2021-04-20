@@ -24,21 +24,34 @@ public func instantiateCh2Page2View() -> PlaygroundLiveViewable {
     
     return liveViewController
 }
+var dataAns = [Character]()
 public func addWord(Char:Character){
+    dataAns.append(Char)
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
     proxy.send(.string(String(Char)))//enum可以取值
 }
+let outData = """
+    addWord(Char: "W") \n
+    addWord(Char: "W") \n
+    addWord(Char: "D") \n
+    addWord(Char: "C")
+    """
 public func playMu(){
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
     proxy.send(.string("play"))//enum可以取值
+    if dataAns[0]=="W" && dataAns[1]=="W" && dataAns[2]=="D" && dataAns[3]=="C" {
+        PlaygroundPage.current.assessmentStatus = .pass(message: "Great! You have successfully entered the Token to WWDC!\nCongratulations on completing all the content And You can try to listen to other morse code")
+    }else{
+        PlaygroundPage.current.assessmentStatus = .fail(hints: ["Please play WWDC"], solution: outData)
+    }
 }
 public func restar(){
+    dataAns=[]
     let page = PlaygroundPage.current
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
     proxy.send(.string("restar"))//enum可以取值
 }
-
 
 

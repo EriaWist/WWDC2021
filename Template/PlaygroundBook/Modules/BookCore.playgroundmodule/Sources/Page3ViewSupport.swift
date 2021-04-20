@@ -28,3 +28,6 @@ public func moveTo(x:Int,y:Int){
     let proxy = page.liveView as! PlaygroundRemoteLiveViewProxy //轉換成傳遞訊息的
     proxy.send(.array([.integer(x),.integer(y)]))//enum可以取值
 }
+public func fail(){
+    PlaygroundPage.current.assessmentStatus = .fail(hints: ["Click on the elevator to see the x and y and use moveTo to move"], solution: "moveTo(x: 50, y: 50)")
+}

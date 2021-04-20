@@ -12,7 +12,6 @@ import PlaygroundSupport
 class Page3ViewController: UIViewController {
     @IBOutlet var myView: SKView!
     var rpg:RPG_SKView?
-    var runingsw = true
     let wall = SKSpriteNode(color: UIColor.brown, size: CGSize(width: 150, height: 50))
     let vendingMachine = SKSpriteNode(imageNamed: "vendingMachine")
     var isTall = false
@@ -76,15 +75,14 @@ extension Page3ViewController:PlaygroundLiveViewMessageHandler{
                 switch arr[1] {
                 case .integer(let y):
                     if let rpg = self.rpg  {
-                        if runingsw{
-                            rpg.moveProtagonist(x: CGFloat(x), y: CGFloat(y)){
-                                if self.wall.intersects(rpg.protagonist)
-                                {
-                                    PlaygroundPage.current.assessmentStatus = .pass(message: "Go to the next level\n [Next Page](@next)")
-                                    self.runingsw = false
-                                }
+                        rpg.moveProtagonist(x: CGFloat(x), y: CGFloat(y)){
+                            if self.wall.intersects(rpg.protagonist)
+                            {
+                                PlaygroundPage.current.assessmentStatus = .pass(message: "Go to the next level\n [Next Page](@next)")
+                                
                             }
                         }
+                        
                     }
                 default:
                     break

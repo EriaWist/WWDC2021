@@ -10,13 +10,15 @@
  # Interact with the screen
  \
  **Story：**
- Today eria is ready and he is about to go to a big event,
+ Today eria is ready and he is about to go to a big event.
+ \
  First it needs to go to dove wist to get the shopping list
- And go to the vending machine and buy the items on the list.
+ and go to the vending machine and buy the items on the list.
  
  * Callout(Tasks):
  1 Talk to wist dove to get the list (touch dove wist directly)
- 2 Go to the vending machine to buy
+ \
+2 Go to the vending machine to buy
  
  **How to play：**
  

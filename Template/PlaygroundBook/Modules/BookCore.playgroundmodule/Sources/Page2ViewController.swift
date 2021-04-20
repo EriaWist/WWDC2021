@@ -47,18 +47,18 @@ class Page2ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-                if let touch = touches.first {                    let datax = touch.location(in: gameScene!).x
-                    let datay = touch.location(in: gameScene!).y
-                    let sx = String(format: "%.3f", Double(datax))
-                    let sy = String(format: "%.3f", Double(datay))
-                    let text = SKLabelNode(text:"x為\(sx)   y為\(sy)")
-                    let tall = SKSpriteNode(color: .white, size: CGSize(width: 1000, height: 100))
-                    text.fontColor = .black
-                    tall.position = CGPoint(x: 0, y: -(gameScene?.size.height)!/2+100)
-                    text.position = CGPoint(x: 0, y: -(gameScene?.size.height)!/2+100)
-                    gameScene?.addChild(tall)
-                    gameScene?.addChild(text)
-                }
+//                if let touch = touches.first {                    let datax = touch.location(in: gameScene!).x
+//                    let datay = touch.location(in: gameScene!).y
+//                    let sx = String(format: "%.3f", Double(datax))
+//                    let sy = String(format: "%.3f", Double(datay))
+//                    let text = SKLabelNode(text:"x為\(sx)   y為\(sy)")
+//                    let tall = SKSpriteNode(color: .white, size: CGSize(width: 1000, height: 100))
+//                    text.fontColor = .black
+//                    tall.position = CGPoint(x: 0, y: -(gameScene?.size.height)!/2+100)
+//                    text.position = CGPoint(x: 0, y: -(gameScene?.size.height)!/2+100)
+//                    gameScene?.addChild(tall)
+//                    gameScene?.addChild(text)
+//                }
         
         
     }
