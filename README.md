@@ -2,6 +2,7 @@
 再戰WWDC
 這次的主題與去年類似也是程式教學
 將 SteamPunk.playgroundbook 或 PlaygroundBook.playgroundbook 丟到 Swift Playground 即可執行
+影片：https://youtu.be/_LtZMBiN7Ys
 
 ---
 首先封面與名稱
