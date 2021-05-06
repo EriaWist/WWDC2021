@@ -1,6 +1,7 @@
 # WWDC2021
 再戰WWDC
 這次的主題與去年類似也是程式教學
+將 SteamPunk.playgroundbook 或 PlaygroundBook.playgroundbook 丟到 Swift Playground 即可執行
 
 ---
 首先封面與名稱
